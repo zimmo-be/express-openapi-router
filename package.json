@@ -1,6 +1,6 @@
 {
 	"name": "express-openapi-router",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Module to define your ExpressJS routes using operationId in an OpenAPI 3.0 spec file",
 	"license": "MIT",
 	"repository": "zimmo-be/express-openapi-router",
@@ -16,8 +16,9 @@
 		"test": "nyc ava test/"
 	},
 	"files": [
-		"src/OpenApiRouter.js"
+		"src/*.js"
 	],
+	"main": "src/OpenApiRouter.js",
 	"keywords": [
 		"express", "openapi", "swagger"
 	],
