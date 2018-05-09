@@ -1,13 +1,13 @@
 {
 	"name": "express-openapi-router",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Module to define your ExpressJS routes using operationId in an OpenAPI 3.0 spec file",
 	"license": "MIT",
 	"repository": "zimmo-be/express-openapi-router",
 	"author": {
 		"name": "Mathieu Maes",
 		"email": "mathieu@zimmo.be",
-		"url": "zimmo.be"
+		"url": "https://www.zimmo.be/"
 	},
 	"engines": {
 		"node": ">=6"
@@ -19,13 +19,13 @@
 		"src/OpenApiRouter.js"
 	],
 	"keywords": [
-		""
+		"express", "openapi", "swagger"
 	],
 	"dependencies": {
-		"express": "^4.16.3",
-		"sinon": "^5.0.7"
+		"express": "^4.16.3"
 	},
 	"devDependencies": {
+		"sinon": "^5.0.7",
 		"ava": "^0.20.0",
 		"codecov": "^2.2.0",
 		"nyc": "^11.0.0"
