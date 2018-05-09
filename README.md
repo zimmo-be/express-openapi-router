@@ -13,14 +13,27 @@ $ npm install express-openapi-router
 
 ## Usage
 
-Create a routes.js file that defines your controllers for each operationId in your OpenAPI spec:
+Tests and examples use the official Petstore example spec:
+https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml
+
+Notice the `operationId` attribute of the endpoint definition inside the spec file:
+```yaml
+paths:
+  /pets:
+    get:
+      summary: List all pets
+      operationId: listPets
+```
+
+
+Create a `routes.js` file that defines your controllers for each operationId in your OpenAPI spec:
 
 ```js
 const OpenApiRouter = require('express-openapi-router');
 
 const api = new OpenApiRouter(require("path/to/your/openapi.json"));
-api.use("showPetById", (req, res) => {
-   res.send("Here's your pet!");
+api.use("listPets", (req, res) => {
+   res.send("Here are your pets!");
 });
 
 module.exports = api.router; // this attribute contains the actual ExpressJS Router
